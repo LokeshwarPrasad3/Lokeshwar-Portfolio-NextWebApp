@@ -1,0 +1,7 @@
+echo "✨ Running Prettier formatting..."
+npm run format || exit 1
+
+echo "📂 Staging formatted files..."
+git add . || exit 1
+
+echo "✅ Pre-commit checks passed. Proceeding to commit."
