@@ -11,6 +11,7 @@ import {
   MobileNavMenu,
 } from "@/components/ui/resizable-navbar";
 import { useState } from "react";
+import LokeshwarImage from "@/assets/images/transition/lokeshwar.jpg";
 
 export function TopNavbar() {
   const navItems = [
@@ -35,7 +36,7 @@ export function TopNavbar() {
       <Navbar>
         {/* Desktop Navigation */}
         <NavBody>
-          <NavbarLogo />
+          <NavbarLogo url={LokeshwarImage} />
           <NavItems items={navItems} />
           <div className="flex items-center gap-4">
             <NavbarButton variant="secondary">Login</NavbarButton>
@@ -46,7 +47,7 @@ export function TopNavbar() {
         {/* Mobile Navigation */}
         <MobileNav>
           <MobileNavHeader>
-            <NavbarLogo />
+            <NavbarLogo url={LokeshwarImage} />
             <MobileNavToggle
               isOpen={isMobileMenuOpen}
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}

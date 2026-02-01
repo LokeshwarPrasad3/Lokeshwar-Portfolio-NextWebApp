@@ -1,7 +1,9 @@
 "use client";
 import { cn } from "@/lib/utils";
 import { IconMenu2, IconX } from "@tabler/icons-react";
+import { Code2 } from "lucide-react";
 import { motion, AnimatePresence, useScroll, useMotionValueEvent } from "motion/react";
+import { StaticImageData } from "next/image";
 
 import React, { useRef, useState } from "react";
 
@@ -202,14 +204,31 @@ export const MobileNavToggle = ({ isOpen, onClick }: { isOpen: boolean; onClick:
   );
 };
 
-export const NavbarLogo = () => {
+type Props = {
+  url: string | StaticImageData;
+};
+
+export const NavbarLogo = ({ url }: Props) => {
   return (
-    <a
-      href="#"
-      className="relative z-20 mr-4 flex items-center space-x-2 px-2 py-1 text-sm font-normal text-black"
-    >
-      <img src="https://assets.aceternity.com/logo-dark.png" alt="logo" width={30} height={30} />
-      <span className="font-medium text-black dark:text-white">Startup</span>
+    <a href="#hero_section" className="flex items-center">
+      <img
+        className="h-8 w-auto rounded-full 2xl:h-9"
+        src={typeof url === "string" ? url : url.src}
+        alt="Lokeshwar"
+      />
+
+      {/* <Code2 className=" text-pink-500 animate-spin " /> */}
+
+      <span className="font-bree relative inline-block bg-gradient-to-r from-pink-500 to-purple-600 bg-clip-text pb-2 pl-3 text-2xl font-medium text-transparent 2xl:text-3xl">
+        Lokeshwar
+        <svg
+          className="absolute bottom-0.5 left-1.5 h-2.5 w-full text-purple-500 opacity-60 2xl:bottom-0"
+          viewBox="0 0 100 10"
+          preserveAspectRatio="none"
+        >
+          <path d="M0 5 Q 50 10 100 5" stroke="currentColor" strokeWidth="3" fill="none" />
+        </svg>
+      </span>
     </a>
   );
 };
