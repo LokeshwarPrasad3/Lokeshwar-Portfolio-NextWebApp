@@ -1,5 +1,11 @@
 import { TopNavbar } from "@/components/layouts/TopNavbar";
 import { HeroSection } from "@/components/home/hero/HeroSection";
+import { FunStatsSection } from "@/components/home/stats/FunStatsSection";
+import { ProofSection } from "@/components/home/proof/ProofSection";
+import { RealityCheckSection } from "@/components/home/reality-check/RealityCheckSection";
+import { WorkSection } from "@/components/home/work/WorkSection";
+import { OneLastThing } from "@/components/home/footer/OneLastThing";
+import { Footer } from "@/components/layouts/Footer";
 import CometPath from "@/components/home/hero/CometPath";
 import { CoolMode } from "@/components/ui/cool-mode";
 import Particles from "@/components/Particles";
@@ -15,6 +21,12 @@ export default function Home() {
       <CoolMode>
         <main className="w-full flex-1">
           <HeroSection />
+          <FunStatsSection />
+          <ProofSection />
+          <RealityCheckSection />
+          <WorkSection />
+          <OneLastThing />
+          <Footer />
         </main>
       </CoolMode>
     </div>
