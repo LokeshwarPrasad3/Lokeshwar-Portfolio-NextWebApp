@@ -15,6 +15,9 @@ const CodeFragment = dynamic(() => import("./CodeFragment").then((mod) => mod.Co
   ssr: false,
 });
 const CometPath = dynamic(() => import("./CometPath"), { ssr: false });
+const Lanyard = dynamic(() => import("@/components/ui/lanyard"), {
+  ssr: false,
+});
 
 // --- Components ---
 
@@ -85,14 +88,9 @@ export const HeroSection = () => {
           <CometPath />
 
           {/* 1. Greeting & Typewriter */}
-          <div className="relative flex flex-col gap-2">
-            <span
-              style={{ fontFamily: "var(--font-bree-serif)" }}
-              className="text-foreground block text-2xl font-bold sm:text-3xl"
-            >
-              Hey,
-            </span>
-            <h1 className="font-bree text-foreground text-4xl leading-tight font-medium tracking-wide md:text-5xl">
+          <div className="font-bree relative flex flex-col gap-2">
+            <span className="text-foreground block text-2xl font-bold sm:text-3xl">Hey,</span>
+            <h1 className="text-foreground text-4xl leading-tight font-medium tracking-wide md:text-5xl">
               I am{" "}
               <span
                 ref={typedEl}

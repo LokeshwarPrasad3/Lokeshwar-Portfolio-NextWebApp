@@ -10,7 +10,7 @@ export const Meteors = ({ number, className }: { number?: number; className?: st
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.5 }}
-      className="fixed top-0 right-0 rotate-45"
+      className="fixed top-0 left-0"
     >
       {meteors.map((el, idx) => {
         const meteorCount = number || 20;

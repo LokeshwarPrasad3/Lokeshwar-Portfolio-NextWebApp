@@ -30,7 +30,7 @@ export const StatCard = ({
       transition={{ duration: 0.5, delay }}
       viewport={{ once: true }}
       className={cn(
-        "group relative flex flex-col gap-3 overflow-hidden rounded-2xl border border-white/5 bg-white/5 p-6 backdrop-blur-md transition-all duration-300 hover:-translate-y-1 hover:border-white/10 hover:shadow-xl",
+        "group relative flex flex-col gap-1 overflow-hidden rounded-2xl border border-white/5 bg-white/5 p-6 backdrop-blur-md transition-all duration-300 hover:-translate-y-1 hover:border-white/10 hover:shadow-xl",
         className
       )}
     >

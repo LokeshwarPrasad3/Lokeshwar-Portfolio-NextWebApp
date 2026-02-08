@@ -5,7 +5,7 @@ import { QuizCard } from "./QuizCard";
 
 export const RealityCheckSection = () => {
   return (
-    <section className="relative w-full overflow-hidden px-6 py-24 lg:px-12">
+    <section className="relative z-10 w-full overflow-hidden px-6 py-24 lg:px-12">
       <div className="container mx-auto max-w-4xl">
         {/* 1. Header */}
         <div className="mb-12 flex flex-col items-center text-center">

@@ -39,8 +39,6 @@ export function TopNavbar() {
         <NavbarLogo url={LokeshwarImage} />
         <NavItems items={navItems} />
         <div className="flex items-center gap-4">
-          <NavbarButton variant="secondary">Login</NavbarButton>
-          {/* <NavbarButton variant="primary">Book a call</NavbarButton> */}
           <a
             href="https://github.com/your-username/your-repo"
             target="_blank"
@@ -79,13 +77,6 @@ export function TopNavbar() {
             </a>
           ))}
           <div className="flex w-full flex-col gap-4">
-            <NavbarButton
-              onClick={() => setIsMobileMenuOpen(false)}
-              variant="primary"
-              className="w-full"
-            >
-              Login
-            </NavbarButton>
             <NavbarButton
               onClick={() => setIsMobileMenuOpen(false)}
               variant="primary"

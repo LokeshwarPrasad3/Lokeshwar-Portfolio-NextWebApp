@@ -9,6 +9,8 @@ import { Footer } from "@/components/layouts/Footer";
 import CometPath from "@/components/home/hero/CometPath";
 import { CoolMode } from "@/components/ui/cool-mode";
 import Particles from "@/components/Particles";
+import Lanyard from "@/components/ui/lanyard";
+import TrafficChart from "@/components/analytics/TrafficChart";
 
 export default function Home() {
   return (

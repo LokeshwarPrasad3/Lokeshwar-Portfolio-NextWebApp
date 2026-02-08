@@ -19,7 +19,7 @@ export const ToolButton = ({
   return (
     <button
       onClick={onClick}
-      className={`flex items-center gap-2 rounded-md px-6 py-2 text-base font-medium transition-all duration-200 ${
+      className={`flex cursor-pointer items-center gap-2 rounded-md px-6 py-2 text-base font-medium transition-all duration-200 ${
         isPrimary
           ? // Primary: Pink -> Purple Gradient, Flat, No Shadow
             "bg-linear-to-r from-pink-500 to-purple-600 text-white hover:opacity-90"

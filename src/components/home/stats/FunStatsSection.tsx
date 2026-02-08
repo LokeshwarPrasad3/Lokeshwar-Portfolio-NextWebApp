@@ -1,13 +1,15 @@
 "use client";
 
 import { motion } from "motion/react";
-import { Bug, Coffee, Eye, Layers, Zap, Rocket } from "lucide-react";
+import { Bug, Coffee, Eye, Layers, Zap, Rocket, Clock } from "lucide-react";
 import { StatCard } from "./StatCard";
 import { InteractiveCard } from "./InteractiveCard";
+import TrafficChart from "@/components/analytics/TrafficChart";
+import { AnalyticsStatCards } from "@/components/analytics/StatCards";
 
 export const FunStatsSection = () => {
   return (
-    <section className="relative w-full overflow-hidden px-6 py-24 lg:px-12">
+    <section className="relative z-10 w-full overflow-hidden px-6 py-24 lg:px-12">
       <div className="container mx-auto max-w-7xl">
         {/* 1. Header */}
         <div className="mb-16 flex flex-col items-center text-center">
@@ -32,29 +34,16 @@ export const FunStatsSection = () => {
           </motion.div>
         </div>
 
-        {/* 2. Grid Layout */}
-        <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
-          {/* Row 1 */}
-          <StatCard
-            label="Portfolio Visitors"
-            value="12,403"
-            icon={Eye}
-            subtext="Mostly recruiters & my mom"
-            gradient="from-blue-500/20 to-cyan-500/20"
-            delay={0.1}
-          />
+        <div className="col-span-12 grid grid-cols-12 gap-6">
+          <div className="col-span-9">
+            <TrafficChart />
+          </div>
 
-          <StatCard
-            label="Avg Page Load"
-            value="<1s"
-            icon={Zap}
-            subtext="Only 2 abandoned (progress)"
-            gradient="from-purple-500/20 to-pink-500/20"
-            delay={0.2}
-          />
+          <div className="col-span-3 grid gap-6">
+            <AnalyticsStatCards />
 
-          {/* Interactive Card spans 2 cols on tablet+ */}
-          <InteractiveCard />
+            {/* <InteractiveCard /> */}
+          </div>
         </div>
       </div>
     </section>
