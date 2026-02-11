@@ -22,7 +22,7 @@ export function TopNavbar() {
     },
     {
       name: "Skills",
-      link: "#skills",
+      link: "#skills_section",
     },
     {
       name: "Contact",

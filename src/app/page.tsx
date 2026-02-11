@@ -12,7 +12,7 @@ import Particles from "@/components/Particles";
 import Lanyard from "@/components/ui/lanyard";
 import TrafficChart from "@/components/analytics/TrafficChart";
 import ClickSpark from "@/components/ClickSpark";
-import TechLogos from "@/components/home/logo-loop/TechLogos";
+import { SkillsSection } from "@/components/home/skills/SkillsSection";
 
 export default function Home() {
   return (
@@ -26,8 +26,8 @@ export default function Home() {
       <ClickSpark sparkColor="#fff" sparkSize={10} sparkRadius={15} sparkCount={8} duration={400}>
         <main className="relative z-10 w-full flex-1">
           <HeroSection />
-          {/* <TechLogos /> */}
           <FunStatsSection />
+          <SkillsSection />
           <ProofSection />
           <RealityCheckSection />
           <WorkSection />

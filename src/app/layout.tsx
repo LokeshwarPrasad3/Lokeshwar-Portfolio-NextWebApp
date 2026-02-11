@@ -5,9 +5,7 @@ import { ThemeProvider } from "@/components/providers/ThemeProvider";
 import QueryProvider from "@/providers/query-provider";
 import { Toaster } from "@/components/ui/sonner";
 
-import DynamicBackground from "@/components/background/DynamicBackground";
-import Lanyard from "@/components/ui/lanyard";
-import { Meteors } from "@/components/ui/meteors";
+import Backgrounds from "@/components/layouts/Backgrounds";
 
 const overpass = Overpass({
   variable: "--font-overpass",
@@ -35,9 +33,7 @@ export default function RootLayout({
       <body className={`${overpass.variable} ${breeSerif.variable} font-overpass dark antialiased`}>
         <ThemeProvider attribute="class" defaultTheme="dark" enableSystem disableTransitionOnChange>
           <QueryProvider>
-            <DynamicBackground />
-            <Lanyard position={[0, 0, 20]} gravity={[0, -40, 0]} />
-            <Meteors number={20} />
+            <Backgrounds />
             <Toaster position="top-center" richColors />
             {children}
           </QueryProvider>

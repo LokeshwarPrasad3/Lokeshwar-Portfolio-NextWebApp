@@ -16,9 +16,6 @@ const CodeFragment = dynamic(() => import("./CodeFragment").then((mod) => mod.Co
   ssr: false,
 });
 const CometPath = dynamic(() => import("./CometPath"), { ssr: false });
-const Lanyard = dynamic(() => import("@/components/ui/lanyard"), {
-  ssr: false,
-});
 
 export const HeroSection = () => {
   const typedEl = useRef(null);
@@ -97,9 +94,9 @@ export const HeroSection = () => {
           </div>
 
           <motion.p
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 0.8, delay: 0.3 }}
+            initial={{ opacity: 0, y: 5 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
             className="text-muted-foreground max-w-lg text-lg leading-relaxed"
           >
             I’m Lokeshwar Prasad Dewangan, a full-stack developer building modern, scalable web
@@ -112,7 +109,7 @@ export const HeroSection = () => {
           <motion.div
             initial={{ opacity: 0, y: 5 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.6 }}
+            transition={{ duration: 0.5, delay: 0.2 }}
             className="flex flex-wrap items-center justify-center gap-4 pt-4 lg:justify-start"
           >
             <ToolButton icon={Mail}>Hire Me</ToolButton>
@@ -161,7 +158,7 @@ export const HeroSection = () => {
 
           <motion.div
             style={{ rotateX: tiltImg, rotateY: tiltImg }} // Micro tilt
-            className="group relative z-20 aspect-[3/4] w-[300px] overflow-hidden rounded-2xl border border-white/10 bg-linear-to-r from-pink-500/30 to-purple-600/30 shadow-2xl md:w-[350px]"
+            className="group relative z-20 aspect-3/4 w-[300px] overflow-hidden rounded-2xl border border-white/10 bg-linear-to-r from-pink-500/30 to-purple-600/30 shadow-2xl md:w-[350px]"
           >
             <ImageTransition />
           </motion.div>

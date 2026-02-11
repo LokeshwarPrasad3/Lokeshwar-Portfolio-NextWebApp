@@ -4,6 +4,7 @@ const nextConfig: NextConfig = {
   images: {
     remotePatterns: [
       { protocol: "https", hostname: "picsum.photos" },
+      { protocol: "https", hostname: "skillicons.dev" },
       { protocol: "https", hostname: "lokeshwardewangan.in" },
       { protocol: "https", hostname: "avatars.githubusercontent.com" },
     ],
@@ -37,7 +38,7 @@ const nextConfig: NextConfig = {
           {
             key: "Content-Security-Policy",
             value:
-              "default-src 'self'; script-src 'self' 'unsafe-eval' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' blob: data: https://picsum.photos https://lokeshwardewangan.in https://avatars.githubusercontent.com; font-src 'self'; connect-src 'self' blob: data: https://api.github.com;",
+              "default-src 'self'; script-src 'self' 'unsafe-eval' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' blob: data: https://picsum.photos https://skillicons.dev https://lokeshwardewangan.in https://avatars.githubusercontent.com; font-src 'self'; connect-src 'self' blob: data: https://api.github.com;",
           },
         ],
       },
