@@ -3,7 +3,7 @@ import { cn } from "@/lib/utils";
 import { IconMenu2, IconX } from "@tabler/icons-react";
 import { Code2 } from "lucide-react";
 import { motion, AnimatePresence, useScroll, useMotionValueEvent } from "motion/react";
-import { StaticImageData } from "next/image";
+import Image, { StaticImageData } from "next/image";
 
 import React, { useRef, useState } from "react";
 
@@ -211,11 +211,16 @@ type Props = {
 export const NavbarLogo = ({ url }: Props) => {
   return (
     <a href="#hero_section" className="flex items-center">
-      <img
-        className="h-7 w-auto rounded-full 2xl:h-8"
-        src={typeof url === "string" ? url : url.src}
-        alt="Lokeshwar"
-      />
+      <div className="relative h-7 w-7 2xl:h-8 2xl:w-8">
+        <Image
+          className="rounded-full object-cover"
+          src={url}
+          alt="Lokeshwar"
+          fill
+          sizes="32px"
+          quality={75}
+        />
+      </div>
 
       {/* <Code2 className=" text-pink-500 animate-spin " /> */}
 

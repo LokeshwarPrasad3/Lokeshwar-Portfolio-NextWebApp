@@ -135,6 +135,7 @@ export const HeroSection = () => {
               sizes="200px"
               placeholder="blur"
               role="presentation"
+              priority
               className="object-cover grayscale"
             />
           </motion.div>
@@ -153,6 +154,7 @@ export const HeroSection = () => {
               placeholder="blur"
               role="presentation"
               className="object-cover mix-blend-multiply grayscale dark:mix-blend-screen"
+              priority
             />
           </motion.div>
 

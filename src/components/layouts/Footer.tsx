@@ -65,7 +65,7 @@ export const Footer = () => {
 
           <div className="grid grid-cols-2 gap-8 sm:grid-cols-3 md:col-span-7">
             <div className="flex flex-col gap-4">
-              <h4 className="text-sm font-semibold tracking-wider text-white uppercase">Pages</h4>
+              <h3 className="text-sm font-semibold tracking-wider text-white uppercase">Pages</h3>
               <div className="flex flex-col gap-2">
                 {["Home", "Projects", "About", "Contact"].map((item) => (
                   <Link
@@ -80,9 +80,9 @@ export const Footer = () => {
             </div>
 
             <div className="flex flex-col gap-4">
-              <h4 className="text-sm font-semibold tracking-wider text-white uppercase">
+              <h3 className="text-sm font-semibold tracking-wider text-white uppercase">
                 Resources
-              </h4>
+              </h3>
               <div className="flex flex-col gap-2">
                 {["Resume", "Uses", "Guestbook", "Source"].map((item) => (
                   <Link

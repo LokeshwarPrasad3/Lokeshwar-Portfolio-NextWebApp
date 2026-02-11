@@ -3,6 +3,7 @@
 import { Marquee } from "@/components/ui/marquee";
 import { cn } from "@/lib/utils";
 import { motion } from "motion/react";
+import Image from "next/image";
 
 const technologies = [
   {
@@ -85,7 +86,14 @@ const TechCard = ({ name, slug }: { name: string; slug: string }) => {
         "dark:border-gray-50/10 dark:bg-gray-50/10 dark:hover:bg-gray-50/15"
       )}
     >
-      <img className="h-8 w-8" alt={name} src={`https://skillicons.dev/icons?i=${slug}`} />
+      <Image
+        className="h-8 w-8"
+        alt={name}
+        src={`https://skillicons.dev/icons?i=${slug}`}
+        width={32}
+        height={32}
+        unoptimized // skillicons.dev serves SVGs/images that might not need Next.js processing, and it's an external domain
+      />
       <span className="text-sm font-medium dark:text-white">{name}</span>
     </div>
   );
